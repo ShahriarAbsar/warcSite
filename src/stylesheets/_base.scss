@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+@import'./variables';
+
+/***
+
+    CSS INDEXING
+--------------------
+1. Defualt Css 
+2. Reuseable Css  
+
+***/
+
+/*** 1. Defualt Css  ***/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    color: $color-black;
+    font-family: $font-en-roboto-flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font-dis-size;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    display: block;
+    color: $color-black;
+    font-family: $font-en-primary;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+    max-width: $container-max-width;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+/*** 2. Reuseable Css  ***/
+.transition{
+      -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.btn{
+    max-width: 170px;
+    width: 100%;
+    background-color: $color-orange;
+    font-family: $font-en-roboto-flex;
+    font-style: normal;
+    font-weight:500;
+    font-size: 15px;
+    color: $color-white;
+    border: none;
+    outline: none;
+    padding: 6px 24px 10px 6px;
+    height: 45px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 25px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10;
+    span{
+        background-color: $color-white;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-orange;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+    }
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $color-secondary;
+        position: absolute;
+        left: -100%;
+        top: 0px;
+        z-index: -10;
+        @extend .transition;
+    }
+    &:hover::after{
+        left: 0px;
+    }
+    &:hover{
+        span{
+            color: $color-secondary;
+        }
+    }
+}

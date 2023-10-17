@@ -1,0 +1,75 @@
+<div class="section">
+    <div class="container">
+        <div class="section-title">
+            <h3>Our Team</h3>
+        </div>
+        <div class="section-main">
+            <div class="slider-area">
+                <swiper [slidesPerView]="3" [autoplay]="{
+                        delay: 1,
+                        disableOnInteraction: true,
+                        reverseDirection:false
+                      }" [loop]="true" [speed]="2000" [spaceBetween]="10" class="mySwiper">
+                    <ng-template swiperSlide *ngFor="let data of ['Fayak','Nihal','Xenon','Tasnim']">
+                        <div class="slide">
+                            <span>{{data}}</span>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path
+                                        d="M15.5704 18.0084L15.5228 4.26346L2.05022 17.8297L0.280993 16.0727L13.7536 2.50644L0.00862993 2.55405L0 0.0622559L17.9999 -8.39378e-05L18.0622 17.9998L15.5704 18.0084Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </ng-template>
+                </swiper>
+            </div>
+
+            <div class="slider-area">
+                <swiper [slidesPerView]="3" [autoplay]="{
+                    delay: 1,
+                    disableOnInteraction: true,
+                    reverseDirection:true
+                  }" [loop]="true" [speed]="2000" [spaceBetween]="10" class="mySwiper">
+                    <ng-template swiperSlide *ngFor="let data of ['Kazi','Navidvaya','Absar','Fayak']">
+                        <div class="slide">
+                            <span>{{data}}</span>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path
+                                        d="M15.5704 18.0084L15.5228 4.26346L2.05022 17.8297L0.280993 16.0727L13.7536 2.50644L0.00862993 2.55405L0 0.0622559L17.9999 -8.39378e-05L18.0622 17.9998L15.5704 18.0084Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </ng-template>
+                </swiper>
+            </div>
+
+            <div class="slider-area">
+                <swiper [slidesPerView]="3" [autoplay]="{
+                    delay: 1,
+                    disableOnInteraction: true,
+                    reverseDirection:false
+                  }" [loop]="true" [speed]="2000" [spaceBetween]="10" class="mySwiper">
+                    <ng-template swiperSlide *ngFor="let data of ['Rashed','Ikramul','Sabbir','Tasnim']">
+                        <div class="slide">
+                            <span>{{data}}</span>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path
+                                        d="M15.5704 18.0084L15.5228 4.26346L2.05022 17.8297L0.280993 16.0727L13.7536 2.50644L0.00862993 2.55405L0 0.0622559L17.9999 -8.39378e-05L18.0622 17.9998L15.5704 18.0084Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </ng-template>
+                </swiper>
+            </div>
+
+        </div>
+    </div>
+</div>
