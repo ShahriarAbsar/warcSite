@@ -28,3 +28,38 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px) {
+
+
+
+    .section {
+        display: block;
+        background-color: $color-primary;
+        padding: 35px 20px;
+        width: 100vw;
+        .section-main {
+            h3 {
+                font-family: $font-en-neue;
+                font-size: 32px;
+                color: #E6E6E6;
+                font-style: italic;
+                font-weight: 500;
+                line-height: 32px;
+                letter-spacing: -1.6px;
+                margin-bottom: 20px !important;
+            }
+    
+            p {
+                font-family: $font-en-primary;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: -0.8px;
+                color: #E6E6E6;
+                margin: 0px;
+            }
+        }
+    }
+    
+}
