@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  drawerOpen: boolean = false;
 
+  toggleDrawer(): void {
+    this.drawerOpen = !this.drawerOpen;
+  }
 }

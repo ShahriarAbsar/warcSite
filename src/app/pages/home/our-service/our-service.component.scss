@@ -38,6 +38,12 @@
                     object-fit: cover;
                     object-position: center;
                 }
+                video {
+                    width: 100%;
+                    min-height: 400px;
+                    object-fit: cover;
+                    object-position: center;
+                }
             }
             .project-text{
                 position: absolute;
