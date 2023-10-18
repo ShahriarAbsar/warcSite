@@ -5,11 +5,12 @@
         </div>
         <div class="section-main">
             <div class="slider-area">
-                <swiper [slidesPerView]="3" [autoplay]="{
+                <swiper [slidesPerView]="6" [autoplay]="{
                         delay: 1,
                         disableOnInteraction: true,
                         reverseDirection:false
-                      }" [loop]="true" [speed]="2000" [spaceBetween]="10" class="mySwiper">
+                      }" [loop]="true" [speed]="2000" [spaceBetween]="10" class="mySwiper"
+                      >
                     <ng-template swiperSlide *ngFor="let data of ['Fayak','Nihal','Xenon','Tasnim']">
                         <div class="slide">
                             <span>{{data}}</span>

@@ -7,7 +7,7 @@
     <!-- <app-warc-details></app-warc-details> -->
     <div class="floating">
         <div class="btn-1" (click)="toggleDrawer()">
-            <img src="../../../assets/svgs/menu.svg" width="15px" height="15px" alt="">
+            <img [src]="drawerOpen ? './assets/svgs/cross.svg' :'./assets/svgs/menu.svg'" width="15px" height="15px" alt="">
         </div>
         <div class="btn-2">
             Let's talk
@@ -16,7 +16,7 @@
     <div [ngClass]="{'drawer': true, 'drawer-show': drawerOpen}">
         <div>Studio</div>
         <div>Services</div>
-        <div>Our Warcs</div>
+        <div routerLink="/our-warc">Our Warcs</div>
         <div>Contact</div>
     </div>
 </div>
