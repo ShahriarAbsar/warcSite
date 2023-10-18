@@ -3,63 +3,79 @@
 .section {
     display: block;
     background-color: $color-primary;
-    padding: 35px 20px;
-    max-width: 500px;
+    padding: 120px 20px;
     .section-main {
+        max-width: 1020px;
+        width: 100%;
+        margin: auto;
         h3 {
             font-family: $font-en-neue;
-            font-size: 32px;
+            font-size: 64px;
             color: #E6E6E6;
             font-style: italic;
             font-weight: 500;
-            line-height: 32px;
-            letter-spacing: -1.6px;
-            margin-bottom: 20px !important;
+            line-height: 64px;
+            letter-spacing: -3.2px;
+            margin-bottom: 35px !important;
         }
 
         p {
-            font-family: $font-en-primary;
-            font-size: 15px;
+            font-family: $font-en-neue;
+            font-size: 36px;
             font-weight: 400;
-            line-height: 16px;
-            letter-spacing: -0.8px;
+            line-height: 36px;
+            letter-spacing: -1.8px;
             color: #E6E6E6;
             margin: 0px;
+            font-style: italic;
         }
     }
 }
 
-@media screen and (min-width: 1024px) {
+
+@media(max-width:1050px){
+    .section {
+        display: block;
+        background-color: $color-primary;
+        padding: 90px 20px;
+        .section-main {
+            h3 {
+                font-size: 55px;
+                line-height: 55px;
+                letter-spacing: -2.5px;
+                margin-bottom: 30px !important;
+            }
+    
+            p {
+                font-size: 30px;
+                line-height: 30px;
+                letter-spacing: -1.6px;
+            }
+        }
+    }
+}
 
 
 
+@media(max-width:700px){
     .section {
         display: block;
         background-color: $color-primary;
         padding: 35px 20px;
-        width: 100vw;
         .section-main {
             h3 {
-                font-family: $font-en-neue;
                 font-size: 32px;
-                color: #E6E6E6;
-                font-style: italic;
-                font-weight: 500;
                 line-height: 32px;
                 letter-spacing: -1.6px;
                 margin-bottom: 20px !important;
             }
     
             p {
-                font-family: $font-en-primary;
-                font-size: 15px;
-                font-weight: 400;
-                line-height: 16px;
+                font-size: 20px;
+                line-height: 22px;
                 letter-spacing: -0.8px;
-                color: #E6E6E6;
-                margin: 0px;
+                font-weight: 400;
             }
         }
     }
-    
 }
