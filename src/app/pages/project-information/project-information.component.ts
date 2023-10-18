@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-information.component.scss']
 })
 export class ProjectInformationComponent {
+  drawerOpen: boolean = false;
 
+  toggleDrawer(): void {
+    this.drawerOpen = !this.drawerOpen;
+  }
 }
