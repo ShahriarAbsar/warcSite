@@ -5,13 +5,19 @@
         </div>
         <div class="section-main">
             <div class="slider-area">
-                <swiper [slidesPerView]="6" [autoplay]="{
+                <swiper [slidesPerView]="3" [autoplay]="{
                         delay: 1,
                         disableOnInteraction: true,
                         reverseDirection:false
-                      }" [loop]="true" [speed]="2000" [spaceBetween]="10" class="mySwiper"
-                      >
-                    <ng-template swiperSlide *ngFor="let data of ['Fayak','Nihal','Xenon','Tasnim']">
+                      }" [loop]="true" [speed]="2000" [spaceBetween]="10" [breakpoints]="{
+                        '1000':{
+                            slidesPerView:4
+                        },
+                        '1400':{
+                            slidesPerView:5
+                        }
+                      }" class="mySwiper">
+                    <ng-template swiperSlide *ngFor="let data of ['Fayek','Nihal','Xenon','Tasnim']">
                         <div class="slide">
                             <span>{{data}}</span>
                             <div>
@@ -32,8 +38,15 @@
                     delay: 1,
                     disableOnInteraction: true,
                     reverseDirection:true
-                  }" [loop]="true" [speed]="2000" [spaceBetween]="10" class="mySwiper">
-                    <ng-template swiperSlide *ngFor="let data of ['Kazi','Navidvaya','Absar','Fayak']">
+                  }" [loop]="true" [speed]="2000" [spaceBetween]="10" [breakpoints]="{
+                    '1000':{
+                        slidesPerView:4
+                    },
+                    '1400':{
+                        slidesPerView:5
+                    }
+                  }" class="mySwiper">
+                    <ng-template swiperSlide *ngFor="let data of ['Kazi','Navidvaya','Absar','Fayek']">
                         <div class="slide">
                             <span>{{data}}</span>
                             <div>
@@ -54,8 +67,15 @@
                     delay: 1,
                     disableOnInteraction: true,
                     reverseDirection:false
-                  }" [loop]="true" [speed]="2000" [spaceBetween]="10" class="mySwiper">
-                    <ng-template swiperSlide *ngFor="let data of ['Rashed','Ikramul','Sabbir','Tasnim']">
+                  }" [loop]="true" [speed]="2000" [spaceBetween]="10" [breakpoints]="{
+                    '1000':{
+                        slidesPerView:4
+                    },
+                    '1400':{
+                        slidesPerView:5
+                    }
+                  }" class="mySwiper">
+                    <ng-template swiperSlide *ngFor="let data of ['Rashed','Ikramul','Sabbir','Suhas','Tasnim']">
                         <div class="slide">
                             <span>{{data}}</span>
                             <div>

@@ -1,0 +1,18 @@
+.header-area{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    padding: 30px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    mix-blend-mode: difference;
+    img{
+        max-width: 85px;
+        height: 23px;
+        display: block;
+        width: 100%;
+    }
+}
