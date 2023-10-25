@@ -21,11 +21,11 @@
                 </div>
                 <div class="form-check-area">
                     <div class="check">
-                        <input type="radio">
-                        <label for="#">I have read and accept the Privacy Policy* </label>
+                        <input type="checkbox" [(ngModel)]="isChecked">
+                        <label for="#">I have read and accept the Privacy Policy*</label>
                     </div>
                     <div class="arrow-icon">
-                        <span><i class="fa fa-arrow-right"></i></span>
+                        <span [ngClass]="{'active': isChecked === true}"><i class="fa fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
@@ -39,8 +39,8 @@
                     </div>
                     <div class="social">
                         <ul>
-                            <li><a href="#">Whatsapp</a></li>
-                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Whatsapp <span><i class="fa fa-arrow-right"></i></span></a></li>
+                            <li><a href="#">Facebook   <span><i class="fa fa-arrow-right"></i></span></a></li>
                         </ul>
                     </div>
                   </div>

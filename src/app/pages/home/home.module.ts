@@ -10,6 +10,7 @@ import { OurService2Component } from './our-service2/our-service2.component';
 import { OurTeamComponent } from './our-team/our-team.component';
 import { SwiperModule } from 'swiper/angular';
 import { WarcDetailsComponent } from './warc-details/warc-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { WarcDetailsComponent } from './warc-details/warc-details.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SwiperModule
+    SwiperModule,
+    FormsModule
   ]
 })
 export class HomeModule { }
