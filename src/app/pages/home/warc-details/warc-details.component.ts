@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./warc-details.component.scss']
 })
 export class WarcDetailsComponent {
+  isChecked = false;
 
 }

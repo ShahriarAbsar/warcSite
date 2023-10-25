@@ -11,11 +11,9 @@
                         reverseDirection:false
                       }" [loop]="true" [speed]="2000" [spaceBetween]="10" [breakpoints]="{
                         '1000':{
-                            slidesPerView:4
+                            slidesPerView:4,
+                            spaceBetween:20
                         },
-                        '1400':{
-                            slidesPerView:5
-                        }
                       }" class="mySwiper">
                     <ng-template swiperSlide *ngFor="let data of ['Fayek','Nihal','Xenon','Tasnim']">
                         <div class="slide">
@@ -40,11 +38,9 @@
                     reverseDirection:true
                   }" [loop]="true" [speed]="2000" [spaceBetween]="10" [breakpoints]="{
                     '1000':{
-                        slidesPerView:4
+                        slidesPerView:4,
+                        spaceBetween:20
                     },
-                    '1400':{
-                        slidesPerView:5
-                    }
                   }" class="mySwiper">
                     <ng-template swiperSlide *ngFor="let data of ['Kazi','Navidvaya','Absar','Fayek']">
                         <div class="slide">
@@ -69,10 +65,8 @@
                     reverseDirection:false
                   }" [loop]="true" [speed]="2000" [spaceBetween]="10" [breakpoints]="{
                     '1000':{
-                        slidesPerView:4
-                    },
-                    '1400':{
-                        slidesPerView:5
+                        slidesPerView:4,
+                        spaceBetween:20
                     }
                   }" class="mySwiper">
                     <ng-template swiperSlide *ngFor="let data of ['Rashed','Ikramul','Sabbir','Suhas','Tasnim']">

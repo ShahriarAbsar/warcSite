@@ -56,7 +56,8 @@
                 color: #191919;
                 font-size: 20px;
                 font-style: italic;
-                font-weight: 500;
+                font-weight: 400;
+                max-width: 400px;
                 line-height: 25px;
                 font-family: $font-en-neue;
                 letter-spacing: -1px;
@@ -79,7 +80,7 @@
                     background: #E6E6E6;
                     height: 45px;
                     padding: 10px 47px;
-                    border: none;
+                    border: 1px solid transparent;
                     color: #ABABAB;
                     font-family: $font-en-neue;
                     font-style: normal;
@@ -88,7 +89,16 @@
                     line-height: 16px;
                     display: block;
                     border-radius: 30px;
+                    outline: none;
+                    transition: all 0.3s linear;
+                    &:focus{
+                        border-color: $color-primary;
+                        &::placeholder{
+                            color: $color-black;
+                        }
+                    }
                 }
+           
             }
 
             .form-check-area {
@@ -102,6 +112,40 @@
                     align-content: center;
                     justify-content: flex-start;
                     gap: 10px;
+                    input{
+                        appearance: none;
+                        background-color: #E6E6E6;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 1px solid #B9B9B9;
+                        position: relative;
+                        cursor: pointer;
+                        &::after{
+                            content: "\f00c";
+                            font-family: 'Font Awesome 5 Free';
+                            font-weight: bold;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width:100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            background-color: #44ae5f;
+                            height: 100%;
+                            color: $color-white;
+                            border-color: #44ae5f;
+                            transition: all 0.3s ease;
+                            visibility: hidden;
+                            opacity: 0;
+                        }
+                        &:checked::after{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
 
                     label {
                         color: #ABABAB;
@@ -109,6 +153,7 @@
                         font-size: 16px;
                         font-style: italic;
                         font-weight: 400;
+                        margin-top: 2px;
                         line-height: 20px;
                         letter-spacing: -0.5px;
                     }
@@ -120,11 +165,15 @@
                         height: 40px;
                         border-radius: 50%;
                         background-color: #ABABAB;
-                        color: #fff;
+                        color:$color-white;
                         display: flex;
                         font-size: 16px;
                         align-items: center;
                         justify-content: center;
+                        &.active{
+                            background-color: #191919;
+                            color: $color-white;
+                        }
                     }
                 }
             }
@@ -185,7 +234,9 @@
                             margin-bottom: 10px;
 
                             a {
-                                display: block;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
                                 color: #ABABAB;
                                 font-family: $font-en-neue;
                                 font-size: 16px;
@@ -193,7 +244,33 @@
                                 font-weight: 400;
                                 line-height: 20px;
                                 letter-spacing: -0.8px;
-                                text-decoration: underline;
+                                position: relative;
+                                overflow: hidden;
+                                padding-bottom: 2px;
+                                span{
+                                    transform: rotate(-45deg) translateY(35px);
+                                    transition: all 0.3s linear;
+                                    font-size: 20px;
+                                    transition-delay: 0.3s;
+                                }
+                                &::after{
+                                    content: "";
+                                    width: 50%;
+                                    height: 1px;
+                                    position: absolute;
+                                    bottom: 0px;
+                                    left: 0px;
+                                    background-color: #ABABAB;
+                                    transition: all 0.3s linear;
+                                }
+                                &:hover{
+                                    span{
+                                        transform: rotate(-45deg) translateX(3px);
+                                    }
+                                    &::after{
+                                        width: 100%;
+                                    }
+                                }
 
                             }
 

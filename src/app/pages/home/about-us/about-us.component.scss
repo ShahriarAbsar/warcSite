@@ -3,9 +3,8 @@
 .section {
     display: block;
     background-color: $color-primary;
-    padding: 120px 20px;
+    padding: 120px 120px;
     .section-main {
-        max-width: 1020px;
         width: 100%;
         margin: auto;
         h3 {
@@ -13,10 +12,11 @@
             font-size: 64px;
             color: #E6E6E6;
             font-style: italic;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 64px;
-            letter-spacing: -3.2px;
-            margin-bottom: 35px !important;
+            max-width: 1000px;
+            letter-spacing: -3px;
+            margin-bottom: 55px !important;
         }
 
         p {
@@ -24,10 +24,11 @@
             font-size: 36px;
             font-weight: 400;
             line-height: 36px;
-            letter-spacing: 1px;
+            letter-spacing: -1.4px;
             color: #E6E6E6;
             margin: 0px;
             font-style: italic;
+            max-width: 1050px;
         }
     }
 }
@@ -41,14 +42,14 @@
         .section-main {
             h3 {
                 font-size: 55px;
-                line-height: 55px;
+                line-height: 58px;
                 letter-spacing: -2.5px;
                 margin-bottom: 30px !important;
             }
     
             p {
                 font-size: 30px;
-                line-height: 30px;
+                line-height: 34px;
                 letter-spacing: -1.6px;
             }
         }

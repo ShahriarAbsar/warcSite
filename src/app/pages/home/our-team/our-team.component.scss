@@ -6,11 +6,11 @@
     background-color: $color-primary;
 
     .section-title {
-        padding: 20px 20px;
+        padding: 20px 20px 20px 260px;
         box-sizing: border-box;
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
-        margin-bottom: 80px;
+        margin-bottom: 100px;
 
 
         h3 {
@@ -21,14 +21,10 @@
             display: block;
             line-height: 32px;
             font-style: italic;
-            max-width: 1200px;
-            width: 100%;
-            margin: auto;
-            letter-spacing: -1.6px;
-
+            letter-spacing: 1.6px;
+            margin: 0px auto;
         }
     }
-
     .section-main {
         width: 100%;
         padding: 25px 5px;
@@ -46,16 +42,16 @@
                     font-family: $font-en-neue;
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 64px;
-                    line-height: 65px;
-                    letter-spacing: -3.2px;
+                    font-size: 70px;
+                    line-height: 71px;
+                    letter-spacing: -2px;
 
 
                 }
 
                 svg {
-                    width: 30px;
-                    height: 30px;
+                    width: 35px;
+                    height: 35px;
                     position: relative;
                     top: 3px;
                 }
@@ -70,6 +66,13 @@
 }
 
 
+@media(max-width:1050px) {
+    .section {
+        .section-title {
+            padding: 20px;
+        }
+    }
+}
 
 
 @media(max-width:1200px) {
