@@ -5,19 +5,24 @@
     <app-our-service2></app-our-service2>
     <app-our-team></app-our-team>
     <app-warc-details></app-warc-details>
+
     <div class="floating">
         <div class="btn-1" (click)="toggleDrawer()">
             <img [src]="drawerOpen ? './assets/svgs/cross.svg' :'./assets/svgs/menu.svg'" width="15px" height="15px" alt="">
         </div>
         <div class="btn-2" >
-
             <a href="https://wa.me/+8801944400016" target="_blank" style="color: #fff;">Let's talk</a>
         </div>
     </div>
+
+    
     <div [ngClass]="{'drawer': true, 'drawer-show': drawerOpen}">
-        <div>Studio</div>
-        <div>Services</div>
-        <div routerLink="/our-warc">Our Warcs</div>
-        <div>Contact</div>
+        <div (click)="onScrollControll('team')">Studio</div>
+        <div (click)="onScrollControll('service')">Services</div>
+        <div (click)="onScrollControll('warc')">Our Warcs</div>
+        <div (click)="onScrollControll('contact')">Contact</div>
     </div>
+
+    <div class="overlay" *ngIf="drawerOpen" (click)="toggleDrawer()"></div>
+
 </div>

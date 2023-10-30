@@ -194,6 +194,7 @@
                 .map {
                     height: 20px;
                     overflow: hidden;
+                    position: relative;
 
                     span {
                         height: 20px;
@@ -207,10 +208,19 @@
                         font-weight: 400;
                         line-height: 25px;
                         letter-spacing: -0.8px;
+                        transition: all 0.3s ease;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        transform: translateY(0px);
+                        &.active-text{
+                              transform: translateY(-20px);
+                        }
                     }
 
                     a {
-                        height: 50px;
+                        height: 20px;
                         display: flex;
                         align-items: flex-start;
                         justify-content: flex-start;
@@ -221,6 +231,15 @@
                         font-weight: 400;
                         line-height: 25px;
                         letter-spacing: -0.8px;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        transform: translateY(20px);
+                        transition: all 0.3s ease;
+                        &.active-link{
+                            transform: translateY(-1px);
+                        }
                     }
                 }
 
@@ -265,7 +284,7 @@
                                 }
                                 &:hover{
                                     span{
-                                        transform: rotate(-45deg) translateX(3px);
+                                        transform: rotate(-45deg) translateX(-1px);
                                     }
                                     &::after{
                                         width: 100%;

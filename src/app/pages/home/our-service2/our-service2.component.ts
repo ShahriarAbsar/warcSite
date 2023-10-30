@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from 'src/app/services/common/scroll.service';
 
 @Component({
   selector: 'app-our-service2',
@@ -6,10 +7,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./our-service2.component.scss']
 })
 export class OurService2Component {
+
   isTeam = 0;
 
+  constructor(
+    private scrollService: ScrollService
+  ) {
+
+  }
+
+  ngOnInit(): void {
+    this.scrollService.refreshService$.subscribe(res => {
+      if (res) {
+        this.onScroll();
+      }
+    })
+  }
+
+
+  /***
+   * SCROLL SECTION
+   * onScroll()
+   */
+  onScroll() {
+    let el = document.getElementById('service') as HTMLElement;
+    el.scrollIntoView({ behavior: "smooth", block: 'start', inline: 'nearest' })
+  }
+
   /**
-   * TEAM CONTROLL FUNCTIONALITY
+   * TEAM CONTROLL
    * onShowTeam()
    */
   onShowTeam(step: number) {
@@ -20,4 +46,6 @@ export class OurService2Component {
     }
 
   }
+
+
 }

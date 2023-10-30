@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section" id="contact">
     <div class="section-title">
         <h3>This is Us</h3>
     </div>
@@ -32,10 +32,8 @@
             <div class="map-area">
                   <div class="map-area-main">
                     <div class="map">
-                        <div class="animation">
-                            <span>Where On the Map?</span>
-                            <a href="#">See Google Maps</a>
-                        </div>
+                            <span [class]="isAnimation ? 'active-text' : ''">Where On the Map ?</span>
+                            <a  [class]="isAnimation ? 'active-link' : ''">See Google Maps</a>
                     </div>
                     <div class="social">
                         <ul>

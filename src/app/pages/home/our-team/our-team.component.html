@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section" id="team">
     <div class="container">
         <div class="section-title">
             <h3>Our Team</h3>
@@ -7,17 +7,18 @@
             <div class="slider-area">
                 <swiper [slidesPerView]="3" [autoplay]="{
                         delay: 1,
-                        disableOnInteraction: true,
-                        reverseDirection:false
+                        disableOnInteraction: false,
+                        reverseDirection:false,
+                        pauseOnMouseEnter:true,
                       }" [loop]="true" [speed]="2000" [spaceBetween]="10" [breakpoints]="{
                         '1000':{
                             slidesPerView:4,
                             spaceBetween:20
                         },
                       }" class="mySwiper">
-                    <ng-template swiperSlide *ngFor="let data of ['Fayek','Nihal','Xenon','Tasnim']">
-                        <div class="slide">
-                            <span>{{data}}</span>
+                    <ng-template swiperSlide *ngFor="let data of teamData1" >
+                        <div class="slide" [id]="data?._id">
+                            <span>{{data?.name}}</span>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
                                     fill="none">
@@ -26,6 +27,10 @@
                                         fill="white" />
                                 </svg>
                             </div>
+                            <!-- <div class="hover-image">
+                                   <img [src]="data?.image" alt="">
+                            </div> -->
+
                         </div>
                     </ng-template>
                 </swiper>
@@ -34,10 +39,14 @@
             <div class="slider-area">
                 <swiper [slidesPerView]="3" [autoplay]="{
                     delay: 1,
-                    disableOnInteraction: true,
-                    reverseDirection:true
+                    disableOnInteraction: false,
+                    reverseDirection:true,
+                    pauseOnMouseEnter:true,
                   }" [loop]="true" [speed]="2000" [spaceBetween]="10" [breakpoints]="{
                     '1000':{
+                        slidesPerView:3
+                    },
+                    '1550':{
                         slidesPerView:4,
                         spaceBetween:20
                     },
@@ -61,8 +70,9 @@
             <div class="slider-area">
                 <swiper [slidesPerView]="3" [autoplay]="{
                     delay: 1,
-                    disableOnInteraction: true,
-                    reverseDirection:false
+                    disableOnInteraction: false,
+                    reverseDirection:false,
+                    pauseOnMouseEnter:true,
                   }" [loop]="true" [speed]="2000" [spaceBetween]="10" [breakpoints]="{
                     '1000':{
                         slidesPerView:4,
